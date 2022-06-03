@@ -14,6 +14,14 @@ const Product = () => {
   return (
     <Card className={classes.root}>
       <CardMedia className={classes.media} image="" title={Product.name} />
+      <CardContent>
+        <div className={classes.cardContent}>
+          <Typography variant="h5" gutterBottom>
+            {Product.name}
+            <Typography variant="h5">{Product.price}</Typography>
+          </Typography>
+        </div>
+      </CardContent>
     </Card>
   );
 };
