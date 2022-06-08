@@ -76,6 +76,17 @@ const App = () => {
 
   return (
     <Router>
+      <Routes>
+        <Route path="/" element={<Products />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
+
+{
+  /* <Router>
       <div style={{ display: "flex" }}>
         <CssBaseline />
         <Navbar
@@ -108,8 +119,5 @@ const App = () => {
           </Route>
         </Routes>
       </div>
-    </Router>
-  );
-};
-
-export default App;
+    </Router> */
+}
