@@ -1,31 +1,26 @@
-import React from "react";
-// import {
-//   Card,
-//   CardMedia,
-//   CardContent,
-//   CardActions,
-//   Typography,
-//   IconButton,
-// } from "@material-ui/core";
-// import { AddShoppingCart } from "@material-ui/icons";
+import React from 'react';
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Typography,
+  IconButton,
+} from '@material-ui/core';
+import { AddShoppingCart } from '@material-ui/icons';
 
-// import useStyles from "./styles";
+import useStyles from './styles';
 
-const Product = () => {
-  return <div>This is product list</div>;
-};
-// const classes = useStyles();
+const Product = ({ product, onAddToCart }) => {
+  const classes = useStyles();
 
-// const handleAddToCart = () => onAddToCart(product.id, 1);
+  const handleAddToCart = () => onAddToCart(product.id, 1);
 
-// return <div>This is the products list</div>;
-
-export default Product;
-
-/* <Card className={classes.root}>
+  return (
+    <Card className={classes.root}>
       <CardMedia
         className={classes.media}
-        image={product.media.url}
+        image={!product.image ? '' : product.image.url}
         title={product.name}
       />
       <CardContent>
@@ -49,4 +44,8 @@ export default Product;
           <AddShoppingCart />
         </IconButton>
       </CardActions>
-    </Card> */
+    </Card>
+  );
+};
+
+export default Product;
